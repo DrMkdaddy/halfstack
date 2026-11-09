@@ -1,0 +1,143 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B",
+  "split": 12,
+  "n_layers": 24,
+  "hidden_size": 896,
+  "late_layers": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "train_tokens": 13312,
+  "val_tokens": 2048,
+  "test_tokens": 2048,
+  "seq_len": 512,
+  "capture_s": 43.34,
+  "lambdas": [
+    {
+      "lambda": 0.0003,
+      "val_mean_input_cosine": 0.9307408053407044,
+      "val_mean_k_cosine": 0.9790231739163212,
+      "val_mean_v_cosine": 0.8779163572282035,
+      "fit_and_score_s": 7.58
+    },
+    {
+      "lambda": 0.001,
+      "val_mean_input_cosine": 0.9313306246745139,
+      "val_mean_k_cosine": 0.9791279849281044,
+      "val_mean_v_cosine": 0.8790631693145129,
+      "fit_and_score_s": 11.75
+    },
+    {
+      "lambda": 0.003,
+      "val_mean_input_cosine": 0.9308178742208878,
+      "val_mean_k_cosine": 0.9787853098543043,
+      "val_mean_v_cosine": 0.8784117513925304,
+      "fit_and_score_s": 5.83
+    },
+    {
+      "lambda": 0.01,
+      "val_mean_input_cosine": 0.926543211277883,
+      "val_mean_k_cosine": 0.9770971758441843,
+      "val_mean_v_cosine": 0.8717710252844575,
+      "fit_and_score_s": 3.76
+    },
+    {
+      "lambda": 0.03,
+      "val_mean_input_cosine": 0.9152063668212765,
+      "val_mean_k_cosine": 0.9732041354792812,
+      "val_mean_v_cosine": 0.8547699768691824,
+      "fit_and_score_s": 8.74
+    },
+    {
+      "lambda": 0.1,
+      "val_mean_input_cosine": 0.886962006583942,
+      "val_mean_k_cosine": 0.964049567181103,
+      "val_mean_v_cosine": 0.8134063270164578,
+      "fit_and_score_s": 8.31
+    }
+  ],
+  "best_lambda": 0.001,
+  "test": {
+    "mean_input_cosine": 0.9299130536812338,
+    "mean_k_cosine": 0.9780864711997193,
+    "mean_v_cosine": 0.875495832809482
+  },
+  "layers": [
+    {
+      "layer": 13,
+      "input_cosine": 0.9788738030936581,
+      "k_cosine": 0.9877322622507732,
+      "v_cosine": 0.9074809011558422
+    },
+    {
+      "layer": 14,
+      "input_cosine": 0.9670093163826916,
+      "k_cosine": 0.9896236091227306,
+      "v_cosine": 0.886040648697091
+    },
+    {
+      "layer": 15,
+      "input_cosine": 0.9536916309646919,
+      "k_cosine": 0.9843973626224455,
+      "v_cosine": 0.9041247591332428
+    },
+    {
+      "layer": 16,
+      "input_cosine": 0.9474561986909238,
+      "k_cosine": 0.9464589211510805,
+      "v_cosine": 0.9732292734865668
+    },
+    {
+      "layer": 17,
+      "input_cosine": 0.9301908467833108,
+      "k_cosine": 0.9824031239237565,
+      "v_cosine": 0.9305605351369155
+    },
+    {
+      "layer": 18,
+      "input_cosine": 0.9271658676503176,
+      "k_cosine": 0.9806071546945858,
+      "v_cosine": 0.8159052377662643
+    },
+    {
+      "layer": 19,
+      "input_cosine": 0.9139635528747919,
+      "k_cosine": 0.982879477585678,
+      "v_cosine": 0.8275804188263282
+    },
+    {
+      "layer": 20,
+      "input_cosine": 0.9013372316088224,
+      "k_cosine": 0.9798255167507236,
+      "v_cosine": 0.8907393822635125
+    },
+    {
+      "layer": 21,
+      "input_cosine": 0.8985774945808269,
+      "k_cosine": 0.9774596601255844,
+      "v_cosine": 0.883277588050251
+    },
+    {
+      "layer": 22,
+      "input_cosine": 0.9110729235624464,
+      "k_cosine": 0.9696077917966606,
+      "v_cosine": 0.80251712547244
+    },
+    {
+      "layer": 23,
+      "input_cosine": 0.8997047243010893,
+      "k_cosine": 0.9779563031728931,
+      "v_cosine": 0.8089982909158488
+    }
+  ],
+  "note": "Lambda is selected on the validation split; these numbers are the separate test split. K/V cosine is measured after each layer's input norm and k/v projection, before RoPE. It scores the map, not the position encoding."
+}
