@@ -15,4 +15,4 @@ jobs:
       - name: install
         run: pip install numpy pytest
       - name: ridge tests
-        run: pytest tests/test_ridge.py -q
+        run: python -m pytest tests/test_ridge.py -q
